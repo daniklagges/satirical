@@ -1,2 +1,65 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mi Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Artículos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nuevo Artículo</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Título del Artículo</h1>
+        
+        <div class="card mb-4">
+            <img src="/api/placeholder/800/400" class="card-img-top" alt="Imagen del artículo">
+            <div class="card-body">
+                <p class="card-text">Contenido del artículo...</p>
+                <p class="card-text"><small class="text-muted">Publicado el 1 de enero, 2024 por Autor</small></p>
+            </div>
+        </div>
+
+        <h2 class="mb-3">Comentarios</h2>
+        <div class="list-group mb-4">
+            <!-- Repetir este bloque por cada comentario -->
+            <div class="list-group-item">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Nombre del Usuario</h5>
+                    <small>Hace 3 días</small>
+                </div>
+                <p class="mb-1">Contenido del comentario...</p>
+            </div>
+            <!-- Fin del bloque de comentario -->
+        </div>
+
+        <h3 class="mb-3">Añadir un comentario</h3>
+        <form>
+            <div class="mb-3">
+                <label for="commentContent" class="form-label">Comentario</label>
+                <textarea class="form-control" id="commentContent" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Comentario</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

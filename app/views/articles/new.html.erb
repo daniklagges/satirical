@@ -1,2 +1,51 @@
-<h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear/Editar Artículo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mi Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Artículos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Nuevo Artículo</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Crear Nuevo Artículo</h1>
+        
+        <form>
+            <div class="mb-3">
+                <label for="articleTitle" class="form-label">Título</label>
+                <input type="text" class="form-control" id="articleTitle" required>
+            </div>
+            <div class="mb-3">
+                <label for="articleContent" class="form-label">Contenido</label>
+                <textarea class="form-control" id="articleContent" rows="10" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="articleImage" class="form-label">Imagen</label>
+                <input type="file" class="form-control" id="articleImage">
+            </div>
+            <button type="submit" class="btn btn-primary">Publicar Artículo</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,7 +1,19 @@
-<main class="container">
-  <div class="row text-center justify-content-center">
-    <div class="col">
-      <h1 class="display-4">Hello World!</h1>
+<div class="jumbotron text-center bg-light p-5">
+  <h1 class="display-4">Bienvenido a MiApp</h1>
+  <p class="lead">Explora los mejores artículos y deja tus comentarios.</p>
+  <a href="#" class="btn btn-primary btn-lg">Ver Artículos</a>
+</div>
+
+<div class="row mt-5">
+  <% @articles.each do |article| %>
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title"><%= article.title %></h5>
+          <p class="card-text"><%= truncate(article.content, length: 100) %></p>
+          <a href="#" class="btn btn-outline-primary">Leer más</a>
+        </div>
+      </div>
     </div>
-  </div>
-</main>
+  <% end %>
+</div>
